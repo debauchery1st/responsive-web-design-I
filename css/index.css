@@ -65,6 +65,11 @@ h1, h2, h3, h4, h5 {
 
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
+.container {
+    width: 876px;
+    margin: 0 auto;
+}
+
 /* #### first class elements #####*/
 
 h1 {
@@ -78,25 +83,39 @@ a {
 	text-decoration: none;
 	color: darkslategrey;
 }
-
+.container header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;    
+}
 /* ########### NAVIGATION MENU ############*/
 
-nav {
-	display: flex;
+.container nav {
+    display: flex;
+    flex-direction: row;
 	justify-content: space-between;
-	align-items: center;
+    align-items: center;
+    width: 70%;
 }
 
-nav a{
+.container nav a{
 	color:#00CED1;
 	text-decoration:none;
 	letter-spacing:3px;
   }
 
-nav a:hover {
+.container nav a:hover {
 	color: black;
 }
 
+.container .contentFlex {
+    justify-content: center;
+}
+
+.container .contentFlex .flexSimple {
+    justify-content: space-between;
+    width: 100%;
+}
 /*############  buttons  ###################### */
 
 
@@ -146,15 +165,15 @@ nav a:hover {
 }
 
 
-
+/* 
 .contentWidth{
-	/* width: 65%; */
 	width: 876px;
-}
+} */
 
 .contentFlex {
 	display: flex;
-	justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contentFlexVanilla {
@@ -237,11 +256,53 @@ nav a:hover {
     .flexSimple .codeSnippet {
         display: none;
     }
-
+    .container {
+        width: 100%;
+    }
+    .container header {
+        margin: 20px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .logo {
+        margin-bottom: 20px;
+    }
+    .container nav a {
+        font-size: 14px;
+        letter-spacing: 2;
+    }
+    .container section div img {
+        object-fit: contain;
+        width: 100%;
+        margin: 20px 0;
+        /* background: red; */
+    }
+    h1 {
+        font-size: 48pt;
+    }
+    
+    h2 {
+        font-size: 18pt;
+    }
 }
 
 @media(max-width: 500px){
     .flexSimple .codeSnippet {
         display: none;
+    }
+
+    .container nav {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container nav a {
+        font-size: 14px;
+        letter-spacing: 3;
+    }
+    .container .contentFlex .flexSimple{
+        justify-content: center;
     }
 }
