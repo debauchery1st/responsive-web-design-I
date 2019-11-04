@@ -260,10 +260,11 @@ a {
         width: 100%;
     }
     .container header {
-        margin: 20px;
+        /* margin: 20px; */
         flex-direction: column-reverse;
         justify-content: center;
         align-items: center;
+
     }
     .container .logo {
         margin-bottom: 20px;
@@ -296,11 +297,16 @@ a {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        width: 100%;
+        margin: 0;
     }
 
     .container nav a {
-        font-size: 14px;
+        /* font-size: 14px; */
         letter-spacing: 3;
+        border: 1px solid grey;
+        width: 100%;
+        padding: 20px;
     }
     .container .contentFlex .flexSimple{
         justify-content: center;
